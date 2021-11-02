@@ -19,7 +19,7 @@ Here you will find some simple instructions related to repo use.
 ### Basics
 
 * pull the repo to some clean directory on your local drive before starting to edit the project
-* all data files should be hosted elsewhere in the cloud and downloaded via ipynb cells either using APIs, wget, gdown, etc. Please do not create PRs which include data
+* all data files should be hosted in the cloud and downloaded in a notebook cell using APIs, wget, gdown, etc. Please do not create PRs which include data.
 * please use gitignore to avoid adding unwanted files to your PRs (hidden files, local requirements, etc)
 
 ### Structure
@@ -36,4 +36,4 @@ Please remember to pull the most recent version of all files before editing any 
 
 ### Branching and PRs
 
-We will be using a standard [branch and merge](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow for all changes to the repo. All your changes should be made in a new branch and then submitted as a PR when you're ready to share.
+We will be using a standard [branch and merge](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) workflow for all changes to the repo. All your changes should be made in a new branch (not a fork) and then submitted as a PR when you're ready to share.
