@@ -7,6 +7,8 @@ import pandas as pd
 from PIL import Image
 from streamlit_tensorboard import st_tensorboard
 
+export STREAMLIT_SERVER_PORT=6006
+
 st.title("Wildfire Analysis")
 
 st.header("Team Members")
@@ -80,12 +82,12 @@ st.subheader("With Distributed Computing (PyTorch Lightning)")
 
 st.subheader("Densenet: Ground")
 
-st_tensorboard(logdir="results/tensorboard/densenet", port=80, width=1080)
+st_tensorboard(logdir="results/tensorboard/densenet", port=6006, width=1080)
 
 st.subheader("Resnet: Ground")
 
-st_tensorboard(logdir="results/tensorboard/resnet", port=80, width=1080)
+st_tensorboard(logdir="results/tensorboard/resnet", port=6006, width=1080)
 
 st.subheader("Densenet: Aerial")
 
-st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=80, width=1080)
+st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=6006, width=1080)
