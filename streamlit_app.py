@@ -80,12 +80,12 @@ st.subheader("With Distributed Computing (PyTorch Lightning)")
 
 st.subheader("Densenet: Ground")
 
-st_tensorboard(logdir="results/tensorboard/densenet", port=6006, width=1080)
+st_tensorboard(logdir="results/tensorboard/densenet", port=8501, width=1080)
 
 st.subheader("Resnet: Ground")
 
-st_tensorboard(logdir="results/tensorboard/resnet", port=6006, width=1080)
+st_tensorboard(logdir="results/tensorboard/resnet", port=8501, width=1080)
 
 st.subheader("Densenet: Aerial")
 
-st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=6006, width=1080)
+st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=8501, width=1080)
