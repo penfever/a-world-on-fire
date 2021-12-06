@@ -7,8 +7,6 @@ import pandas as pd
 from PIL import Image
 from streamlit_tensorboard import st_tensorboard
 
-export STREAMLIT_SERVER_PORT=6006
-
 st.title("Wildfire Analysis")
 
 st.header("Team Members")
