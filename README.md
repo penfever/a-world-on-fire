@@ -2,6 +2,10 @@
 
 Here's some important information related to our group project. If you have questions or comments, let me know on Slack.
 
+## Streamlit Web App
+
+https://share.streamlit.io/penfever/bigdata-proj/main
+
 ## Dev Environment
 
 The current plan is for us to work locally on identical Docker images (we can discuss this during the meeting) using branches. Then we can submit PRs to the repo when we are ready to share our changes with the group.
