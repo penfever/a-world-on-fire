@@ -19,7 +19,7 @@ GF_RES = "results/csv/fire_interest.csv"
 
 CAPTION = "Satellite imagery from 2021's Dixie Creek Fire in Oregon"
 
-TB = "results/img/tb_viz.gif"
+TB = "results/img/tb_vid.mp4"
 
 TB_CAPTION = "Animated demonstration of interactive Tensorboard dashboard"
 
@@ -136,19 +136,26 @@ st.markdown("Please select a model to view its Tensorboard. Please note -- this 
 
 mod_pick = st.radio(
      "Pick a model",
-     ('Animation', 'Densenet: Ground', 'Resnet: Ground', 'Densenet: Aerial'))
+     ("Animation", 'Densenet: Ground', 'Resnet: Ground', 'Densenet: Aerial'))
 
-if mod_pick == 'Animation':
-    st.subheader("GIF Animation of Tensorboard Output")
-    st.image(TB, caption=TB_CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+# st.image(TB, caption=TB_CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+count = 0
+
+if mod_pick == "Animation":
+    video_file = open(TB, 'rb')
+    video_bytes = video_file.read()
+    st.video(video_bytes)
 elif mod_pick == 'Densenet: Ground':
     st.subheader("Densenet: Ground")
     st_tensorboard(logdir="results/tensorboard/densenet", port=6006, width=1080)
+    count += 1
 elif mod_pick == 'Resnet: Ground':
     st.subheader("Resnet: Ground")
     st_tensorboard(logdir="results/tensorboard/resnet", port=6007, width=1080)
+    count += 1
 elif mod_pick == "Densenet: Aerial":
     st.subheader("Densenet: Aerial")
     st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=6008, width=1080)
+    count += 1
 
 st.markdown("For details on the models and insight into the code, please check out the accompanying notebooks.")
