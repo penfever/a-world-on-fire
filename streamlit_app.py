@@ -77,12 +77,13 @@ st.markdown("For more analysis and notebooks containing the code used to generat
 BLOCK = """
 Questions we explore include --
 
-* Why was the 2021 fire season so unusual? (Why are fires spreading faster? Why are they burning hotter? Why are they changing direction and speed more rapidly than in prior years? Why are traditional methods of fire modeling and containment proving less
-effective than in prior years?)
+* Why have recent fire seasons been so unusual?
 
 * What are some unique ways to visualize the human and financial toll of these fires, using big data tools?
 
-* What can we expect in 2022 and beyond, if current trends continue? (Should we expect more? How many? Where? What new regions might become wildfire hotspots as warming continues?)
+* What can we expect in 2022 and beyond, if current trends continue?
+
+* How can we use emerging distributed technologies to help combat the spread of wildfires?
 """
 
 st.markdown(BLOCK)
