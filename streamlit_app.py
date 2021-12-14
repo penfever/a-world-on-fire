@@ -78,14 +78,25 @@ df_dc
 
 st.subheader("With Distributed Computing (PyTorch Lightning)")
 
-st.subheader("Densenet: Ground")
+st.markdown("Please select a model to view its Tensorboard. Please note -- this feature is not enabled on Streamlit Cloud. Only the GIF animation will be available.")
 
-st_tensorboard(logdir="results/tensorboard/densenet", port=6006, width=1080)
+mod_pick = st.radio(
+     "Pick a model",
+     ('Animation', 'Densenet: Ground', 'Resnet: Ground', 'Densenet: Aerial'))
 
-st.subheader("Resnet: Ground")
+if mod_pic == 'Animation':
+    st.subheader("GIF Animation of Tensorboard Output")
+    TB = "results/img/tb_viz.gif"
+    TB_CAPTION = "Animated demonstration of interactive Tensorboard dashboard"
+    st.image(TB, caption=TB_CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
+elif mod_pick == 'Densenet: Ground':
+    st.subheader("Densenet: Ground")
+    st_tensorboard(logdir="results/tensorboard/densenet", port=6006, width=1080)
+elif mod_pick == 'Resnet: Ground':
+    st.subheader("Resnet: Ground")
+    st_tensorboard(logdir="results/tensorboard/resnet", port=6007, width=1080)
+elif mod_pick == "Densenet: Aerial":
+    st.subheader("Densenet: Aerial")
+    st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=6008, width=1080)
 
-st_tensorboard(logdir="results/tensorboard/resnet", port=6006, width=1080)
-
-st.subheader("Densenet: Aerial")
-
-st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=6006, width=1080)
+st.markdown("For details on the models and insight into the code, please check out the accompanying notebooks.")
