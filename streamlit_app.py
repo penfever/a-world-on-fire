@@ -84,7 +84,7 @@ mod_pick = st.radio(
      "Pick a model",
      ('Animation', 'Densenet: Ground', 'Resnet: Ground', 'Densenet: Aerial'))
 
-if mod_pic == 'Animation':
+if mod_pick == 'Animation':
     st.subheader("GIF Animation of Tensorboard Output")
     TB = "results/img/tb_viz.gif"
     TB_CAPTION = "Animated demonstration of interactive Tensorboard dashboard"
