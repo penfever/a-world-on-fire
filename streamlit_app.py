@@ -30,7 +30,7 @@ st.header("Team Members")
 st.markdown("Benjamin Feuer, Dennis Pang, Jinyang Xue, Subei Han, Yuvraj Raina")
 
 BLOCK_6 = """
-The images below are from a 2021 wildfire called Dixie Creek. By August 6, it had grown to become the largest single (i.e. non-complex) wildfire in the state's history, and the second-largest wildfire overall (after the August Complex fire of 2020),[7][8] bigger than the state of Rhode Island, according to Wikipedia.
+The images below are from a 2021 California wildfire called Dixie Creek. By August 6, it had grown to become the largest single (i.e. non-complex) wildfire in the state's history, and the second-largest overall (after the August Complex fire of 2020),[7][8] bigger than the state of Rhode Island, according to Wikipedia.
 """
 
 DIX_IMG = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Pyrocumulus_cloud_produced_by_the_Dixie_Fire_on_July_22-5865.jpg/2560px-Pyrocumulus_cloud_produced_by_the_Dixie_Fire_on_July_22-5865.jpg"
@@ -138,7 +138,6 @@ mod_pick = st.radio(
      "Pick a model",
      ("Animation", 'Densenet: Ground', 'Resnet: Ground', 'Densenet: Aerial'))
 
-# st.image(TB, caption=TB_CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 count = 0
 
 if mod_pick == "Animation":
