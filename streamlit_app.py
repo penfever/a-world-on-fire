@@ -4,8 +4,24 @@ Wildfire Web App
 
 import streamlit as st
 import pandas as pd
+import dateutil
 from PIL import Image
 from streamlit_tensorboard import st_tensorboard
+import plotly.express as px
+
+DIXIE_FIRE = "results/img/dixie.gif"
+
+IC_RES = "results/csv/xgb_pt.csv"
+
+WF_TREND = "https://www.epa.gov/sites/default/files/2021-04/wildfires_download2_2021.png"
+
+GF_RES = "results/csv/fire_interest.csv"
+
+CAPTION = "Satellite imagery from 2021's Dixie Creek Fire in Oregon"
+
+TB = "results/img/tb_viz.gif"
+
+TB_CAPTION = "Animated demonstration of interactive Tensorboard dashboard"
 
 st.title("Wildfire Analysis")
 
@@ -13,15 +29,32 @@ st.header("Team Members")
 
 st.markdown("Benjamin Feuer, Dennis Pang, Jinyang Xue, Subei Han, Yuvraj Raina")
 
-DIXIE_FIRE = "results/img/dixie.gif"
-
-IC_RES = "results/csv/xgb_pt.csv"
-
-CAPTION = "Satellite imagery from 2021's Dixie Creek Fire in Oregon"
-
 st.image(DIXIE_FIRE, caption=CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
 st.header("Project Overview")
+
+BLOCK_5 = """
+Climate change continues to transform the planet, and it appears wildfire seasons are growing longer and more intense as a consequence. According to National Interagency Fire Center data, of the 10 years with the largest acreage burned, all have occurred since 2004, including the peak year in 2015. This period coincides with many of the warmest years on record nationwide (see the U.S. and Global Temperature indicator). The largest increases have occurred during the spring and summer months.
+"""
+
+st.markdown(BLOCK_5)
+
+st.image(WF_TREND)
+
+st.markdown("As the damage caused by wildfires intensifies, so does the interest in a more complete understanding of its causes and consequences.")
+
+df_g = pd.read_csv(GF_RES)
+
+df_g["Month"] = df_g["Month"].apply(lambda x: dateutil.parser.parse(x))
+df_g["Month"] = df_g["Month"].dt.to_period("Y")
+df1 = pd.DataFrame()
+dfg_agg = df_g.groupby("Month").max()
+dfg_agg = dfg_agg.assign(year=pd.Series([i for i in range(2004, 2022)]).values)
+dfg_agg = dfg_agg[["year", "wildfire"]]
+fig = px.line(dfg_agg, x="year", y="wildfire", title='Year over year peak interest in wildfires (Google Trends)')
+st.plotly_chart(fig)
+
+st.markdown("Big data techniques and technologies have transformed our understanding of a wide range of topics. Can they do the same for wildfire analysis?")
 
 st.markdown("In this project, we explore the enormous climate and imagery datasets now publicly available for researchers and extract unique lessons and actionable insights.")
 
@@ -78,7 +111,7 @@ df_dc
 
 st.subheader("With Distributed Computing (PyTorch Lightning)")
 
-st.markdown("Please select a model to view its Tensorboard. Please note -- this feature is not enabled on Streamlit Cloud. Only the GIF animation will be available.")
+st.markdown("Please select a model to view its Tensorboard. Please note -- this feature may not be enabled on Streamlit Cloud. In that case, only the GIF animation will be available.")
 
 mod_pick = st.radio(
      "Pick a model",
@@ -86,8 +119,6 @@ mod_pick = st.radio(
 
 if mod_pick == 'Animation':
     st.subheader("GIF Animation of Tensorboard Output")
-    TB = "results/img/tb_viz.gif"
-    TB_CAPTION = "Animated demonstration of interactive Tensorboard dashboard"
     st.image(TB, caption=TB_CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 elif mod_pick == 'Densenet: Ground':
     st.subheader("Densenet: Ground")
