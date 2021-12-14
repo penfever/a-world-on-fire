@@ -92,8 +92,14 @@ st.header("Image Classification in Wildfire Analysis")
 
 BLOCK_2 = """
 Wildfire imagery can tell us a lot about fire behavior. Specifically, it can help spot them early, before they spread and become more difficult to control. 
-We will employ state of the art image classification methods on wildfire imagery datasets, using popular frameworks such as PyTorch and XGBoost.
-We will compare the results we can achieve using distributed computing techniques to the results we can achieve without distributed computing methods.
+
+OUR APPROACH:
+We collected three different fire imagery datasets -- one of ground-level fires, one of aerial fire imagery taken from a drone, and one of satellite-level imagery, ranging in size from 2GB to 30GB.
+We built 3 non-distributed classifiers (an XGBoost Boosted Tree, a Densenet CNN, and a Wide-Resnet CNN) using two popular frameworks, XGBoost and PyTorch, and tested them on our datasets for a total of 9 non-distributed models.
+We then rebuilt the same three models in distributed frameworks using PyTorch Lightning, Dask and RAPIDS and tested them on our datasets (we did not fully test the distributed Resnet or Densnet for time reasons), a total of 6 distributed models.
+For the models which did not use PyTorch Lightning, we saved the results of our runs in a MongoDB database and used that to build the table you see below.
+For the PyTorch Lightning models, we saved interactive Tensorboard Dashboards which you can view below.
+Our "distributed" setup was a single-node, single-GPU Colab instance, so accurate comparisons were not possible -- however, our experiments suggest that distributed models have the capacity to improve on the performance of traditional models in both speed and accuracy. 
 """
 
 st.markdown(BLOCK_2)
