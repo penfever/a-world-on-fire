@@ -43,7 +43,7 @@ st.image(DIX_IMG, caption=DIX_CAPT)
 
 st.image(DIXIE_FIRE, caption=CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
-st.markdown("These stunning images are a perfect introduction to the topic of our project -- understanding wildfires.")
+st.markdown("These stunning images were captured by NASA's high-resolution MODIS imager and converted from GEOTIFF to RGB format crops which you see here. The images are spread out over a series of weeks. Note the massive smoke trail that develops and fades, clearly visible from space. These visuals are a perfect introduction to the topic of our project -- understanding wildfires.")
 
 st.header("Project Overview")
 
