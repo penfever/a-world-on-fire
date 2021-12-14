@@ -31,6 +31,20 @@ st.markdown("Benjamin Feuer, Dennis Pang, Jinyang Xue, Subei Han, Yuvraj Raina")
 
 st.image(DIXIE_FIRE, caption=CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
+BLOCK_6 = """
+The images above are from a 2021 wildfire called Dixie Creek. By August 6, it had grown to become the largest single (i.e. non-complex) wildfire in the state's history, and the second-largest wildfire overall (after the August Complex fire of 2020),[7][8] bigger than the state of Rhode Island, according to Wikipedia.
+"""
+
+DIX_IMG = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Pyrocumulus_cloud_produced_by_the_Dixie_Fire_on_July_22-5865.jpg/2560px-Pyrocumulus_cloud_produced_by_the_Dixie_Fire_on_July_22-5865.jpg"
+
+DIX_CAPT = "The Dixie Creek Wildfire from ground level."
+
+st.markdown(BLOCK_6)
+
+st.image(DIX_IMG, caption=DIX_CAPT)
+
+st.markdown("These stunning images are a perfect introduction to the topic of our project -- understanding wildfires.")
+
 st.header("Project Overview")
 
 BLOCK_5 = """
