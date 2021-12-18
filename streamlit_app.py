@@ -168,7 +168,159 @@ dfg_agg = dfg_agg[["year", "wildfire"]]
 fig = px.line(dfg_agg, x="year", y="wildfire", title='Year over year peak interest in wildfires (Google Trends)')
 st.plotly_chart(fig)
 
-st.header("SECTION III: Taking Action on Wildfires")
+st.subheader("SECTION II: Understanding Key Wildfire Causes")
+
+"""
+In Section I, we showed that wildfires have indeed grown more frequent
+and more intense. However, in order to consider how best to combat the
+issue, we must consider another aspect of the problem.
+
+**Can we draw any meaningful conclusions about the causes and locations
+of these wildfires, and can we use this information to better evaluate
+potential solutions?**
+
+To answer this question, we may begin by noting that this increase is
+not evenly distributed among all states. Historically, the drier states
+west of the Mississippi river have accounted for nearly all of the major
+wildfires by acreage burned, and this continues to be true, as this
+[NCWG dataset](https://www.kaggle.com/rtatman/188-million-us-wildfires)
+shows.
+"""
+
+st.image(".//media/image4.png", caption="A map depicting the location of large wildfires, 2000-2020")
+
+"""
+Drought-ridden California, in particular, accounts for a
+disproportionate share of the increase in 2020, as we can see below in
+this [FIRMS dataset](https://firms.modaps.eosdis.nasa.gov/download/)
+graph of fire frequency by region (with regions represented as (lat,
+long) coordinate pairs).
+"""
+
+st.image(".//media/image5.png", caption="A surge in California wildfires in 2020")
+
+"""
+Indeed, if we consider the raw increase in number of reported fires
+year-over-year, California consistently shows up as a hotspot. 
+Using data from NOAA's NIDIS Drought monitor, we can see that the recent
+droughts in California correlate closely with peak fire years recorded
+in FIRMS.
+"""
+
+st.image(".//media/image7.png", caption="NOAA NIDIS Drought Data in California")
+
+"""
+These data suggest that an increase in drought conditions is strongly
+correlated with an increase in wildfire frequency and intensity, and
+that [ongoing conditions](https://climate.nasa.gov/evidence/) leading to
+extreme shifts in climate may also be driving the surge in wildfires we
+have documented above.
+
+We can further confirm this by considering how regional data on wildfire
+causes, sourced from [NIFC WFIGS Wildfire
+Locations](https://data-nifc.opendata.arcgis.com/datasets/nifc::wfigs-wildland-fire-locations-full-history/about)
+data, influence the problem.
+
+By raw count, human-initiated wildfires exceed that of natural
+wildfires. Furthermore, human-initiated wildfires are increasing in
+frequency, whereas the frequency of natural wildfires has remained flat.
+"""
+
+st.image(".//media/image8.png", caption="NIFC Causes of Wildfires")
+st.image(".//media/image9.png", caption="NIFC Causes of Wildfires over time")
+st.image(".//media/image10.png", caption="NIFC Causes of Wildfires over time")
+
+"""
+This might seem to contradict our earlier conclusions
+about drought being a major driver of increasing wildfire intensity.
+However, when we look at area burned in this [NCWG
+dataset](https://www.kaggle.com/rtatman/188-million-us-wildfires), we
+can see that the story is in fact quite different. Lightning alone
+accounts for more burned area than all other causes combined, with room
+to spare.
+
+The explanation for this is well understood \-- fires started by human
+beings tend to occur in populated areas, and are therefore more likely
+to be detected and contained before they grow into uncontained
+megafires. Fires caused by lightning (and to a lesser extent,
+malfunctioning electrical equipment) tend to happen in remote and
+inaccessible areas and are more difficult to detect and combat
+effectively.
+"""
+
+st.image(".//media/image11.png", caption="Burned area aggregated by wildfire cause")
+
+"""
+This fact accounts for the following
+graph. Alaska is the bottom third of states for wildfire frequency.
+However, in terms of acreage burned, it exceeds the bottom twenty states
+in the list combined. Alaska's low population and rugged terrain make it
+a very difficult environment for firefighters.
+
+Although large uncontrolled forest fires have always been a historical
+fact of life, that does not mean that the size and frequency of
+wildfires we are seeing today is somehow natural. Indeed, it is likely
+that the side-effects of man-made climate change, such as the droughts
+we documented above, are driving a vicious cycle in the environment
+which itself contributes to further climate change. [Consider that from
+1950 until 2009, forest fires in Alaska have released CO2 equal to half
+of all carbon emissions from the european
+union.](https://www.Dw.Com/en/forest-fires-in-alaska-a-ticking-climate-time-bomb/a-18684423)
+Uncontrolled wildfire, natural or not, poses a significant climate
+threat when ignored.
+
+Alaska's northerly latitude has previously protected it from large-scale
+wildfires -- simply put, where there's ice, there isn't fire. However,
+ice coverage has [dropped precipitously in
+Alaska](https://www.carbonbrief.org/humans-causing-up-to-two-thirds-arctic-summer-sea-ice-loss-study-confirms)
+since the 1970s, and at least 50% of this loss is caused by greenhouse
+gas emissions.
+
+Furthermore, there is reason to believe that as Earth's climate
+continues to change, so may the regional character of fire distribution
+in the United States. According to [NIFC
+data](https://data-nifc.opendata.arcgis.com/datasets/nifc::wfigs-wildland-fire-locations-full-history/about),
+in 2021, midwestern states have had fire counts similar to those found
+in West Coast states in 2014 and 2015. Even more alarmingly, as we can
+see in the maps below from 2002 (left) and 2020 (right), the majority of
+wildfire burned area is no longer a Western state problem; in 2020, all
+but a handful of states saw enough annual burned area to register on the
+chart.
+"""
+
+st.image(".//media/image12.png", caption="Alaska burn area")
+st.image(".//media/image13.png", caption="Alaska burn area")
+
+"""
+Overall, the data lead us to conclude that the size and scale of
+lightning-caused wildfires is the major driver of the overall increase
+in wildfire intensity and acreage burned, which is in turn driven by
+changes in Earth's climate. We further conclude that the scope of the
+problem is broadening to include areas which were previously protected,
+which is likely to continue the vicious cycle of the destruction of
+forests, which serve as natural [carbon
+sinks](https://www.wri.org/insights/forests-absorb-twice-much-carbon-they-emit-each-year),
+and the corresponding release of CO2 into the atmosphere.
+
+The unhappy fact is that the challenges represented by these findings
+are predominantly the result of long-term, collective policies and
+incentives rather than individual choices. While it remains vitally
+important for vacationers to extinguish their campfires and cigarettes
+fully before leaving a forest, it will not and cannot make Alaskan
+mountain ranges easier to traverse, nor can it stop the polar ice caps
+from vanishing.
+
+As such, we contend that systemic solutions are demanded. Governor Gavin
+Newsom of California recognized this fact with his [recent dedication of
+funds](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjzm4qu2u30AhWVjIkEHSAABNQ4ChAWegQIBRAB&url=https%3A%2F%2Fwww.gov.ca.gov%2F2021%2F04%2F13%2Fgovernor-newsom-signs-landmark-536-million-wildfire-package-accelerating-projects-to-protect-high-risk-communities%2F&usg=AOvVaw090ezI0vcqoykBw5YD8to4)
+to wildfire suppression. While national and state policy and budgeting
+decisions are well beyond the scope of this report, we can address a
+different aspect of the challenge -- the role of deep learning models in
+early detection of wildfires.
+"""
+
+
+st.subheader("SECTION III: Taking Action on Wildfires")
 
 BLOCK_2 = """
 Wildfires play an important role in natural systems, and their
@@ -183,9 +335,12 @@ partnered with prevention, must form the cornerstones of any successful
 wildfire management policy. Even small delays in detection can be very
 costly. Megafires can move at speeds of [nearly 15 miles per
 hour](https://en.wikipedia.org/wiki/Wildfire) under favorable winds.
+"""
+st.markdown(BLOCK_2)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vhJeDYQVtdQ?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+st.components.v1.iframe(r'<iframe width="560" height="315" src="https://www.youtube.com/embed/vhJeDYQVtdQ?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 
+"""
 At its peak, the Camp Fire is estimated to have burned an area greater
 than one [football
 field](https://www.cnn.com/2018/11/09/us/wildfires-why-they-spread-so-quickly-wcx/index.html)
@@ -226,8 +381,6 @@ improve the speed and accuracy of image classifiers on fire data, since
 improvements in these areas could decrease the cost and improve the
 utility of all fire detection systems.
 """
-
-st.markdown(BLOCK_2)
 
 st.subheader("Our Methodology")
 
