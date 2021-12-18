@@ -338,7 +338,7 @@ hour](https://en.wikipedia.org/wiki/Wildfire) under favorable winds.
 """
 st.markdown(BLOCK_2)
 
-st.components.v1.html(r'<iframe width="560" height="315" src="https://www.youtube.com/embed/vhJeDYQVtdQ?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
+st.components.v1.html(r'<iframe width="560" height="800" src="https://www.youtube.com/embed/vhJeDYQVtdQ?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
 
 """
 At its peak, the Camp Fire is estimated to have burned an area greater
