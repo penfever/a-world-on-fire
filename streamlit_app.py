@@ -31,7 +31,7 @@ st.markdown("Benjamin Feuer, Dennis Pang, Jinyang Xue, Subei Han, Yuvraj Raina")
 
 st.markdown("For more analysis and notebooks containing the code used to generate this project, please visit out [project Github.](https://github.com/penfever/bigdata-proj)")
 
-st.subtitle("ABSTRACT")
+st.subheader("ABSTRACT")
 
 BLOCK_7 = """
 This report aims to succinctly document the existence of a novel and
