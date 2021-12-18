@@ -23,11 +23,47 @@ TB = "results/img/tb_vid.mp4"
 
 TB_CAPTION = "Animated demonstration of interactive Tensorboard dashboard"
 
-st.title("Wildfire Analysis")
+st.title("A World on Fire: Confronting the Growing Challenge of Wildfire Detection and Suppression")
 
 st.header("Team Members")
 
 st.markdown("Benjamin Feuer, Dennis Pang, Jinyang Xue, Subei Han, Yuvraj Raina")
+
+st.markdown("For more analysis and notebooks containing the code used to generate this project, please visit out [project Github.](https://github.com/penfever/bigdata-proj)")
+
+st.subtitle("ABSTRACT")
+
+BLOCK_7 = """
+This report aims to succinctly document the existence of a novel and
+growing threat in the United States -- the rise of uncontrolled
+megafires driven primarily by climate change. It lays out the reasons it
+is reasonable to believe that the frequency and intensity of fires is
+increasing, and why systemic climate change is the likely culprit for
+these changes. Finally, it addresses how recent advances in distributed
+technology can potentially lead to successful and timely interventions
+by professional firefighting teams.
+
+Below is a summary of the three major points we cover \--
+
+-   I. Recent evidence derived from data released by US Government
+    agencies leads us to conclude that wildfires pose an increasing
+    threat to the lives and property of United States citizens.
+
+-   II\. This threat is driven by changes at the level of society rather than
+    the individual, and as such, we must seek systemic, structural solutions
+    to the problem.
+
+-   III\. Distributed deep learning models for image classification as a
+    potential method of improving wildfire response times by emergency teams
+    and thereby reducing wildfire spread.
+
+Afterwards, we offer a brief conclusion and a list of resources for
+further exploration.
+"""
+
+st.markdown(BLOCK_7)
+
+st.subheader("Case Study: Dixie Creek")
 
 BLOCK_6 = """
 The images below are from a 2021 California wildfire called Dixie Creek. By August 6, it had grown to become the largest single (i.e. non-complex) wildfire in the state's history, and the second-largest overall (after the August Complex fire of 2020),[7][8] bigger than the state of Rhode Island, according to Wikipedia.
@@ -43,19 +79,80 @@ st.image(DIX_IMG, caption=DIX_CAPT)
 
 st.image(DIXIE_FIRE, caption=CAPTION, width=None, use_column_width=None, clamp=False, channels="RGB", output_format="auto")
 
-st.markdown("These stunning images were captured by NASA's high-resolution MODIS imager and converted from GEOTIFF to RGB format crops which you see here. The images are spread out over a series of weeks. Note the massive smoke trail that develops and fades, clearly visible from space. These visuals are a perfect introduction to the topic of our project -- understanding wildfires.")
+st.markdown("These shocking images were captured by NASA's high-resolution MODIS imager and converted from GEOTIFF to RGB format crops which you see here. The images are spread out over a series of weeks. Note the massive smoke trail that develops and fades, clearly visible from space.")
 
-st.header("Project Overview")
+st.image(".//media/image18.jpeg", caption="A home burns in Plumas County. Source: NY Times")
+
+"""
+Yet, at ground level, the message is all too easy to comprehend.
+
+This year, it was the homes, stores and services Plumas County that were
+razed to the ground.
+
+Next year, it could be ours.
+"""
+
+st.subheader("SECTION I: Recognizing the Increasing Toll of Wildfires")
+
+BLOCK_8 = """
+In order to justify increased action on wildfire prevention, we must
+first address the underlying implications of our investigation.
+
+**Do wildfires pose an increasing threat to the lives and property of
+United States citizens?**
+
+One possible measure of wildfire threat is a raw frequency count of
+wildfires per year, like the one we see here, aggregated from NASA's
+[FIRMS dataset](https://firms.modaps.eosdis.nasa.gov/download/). (2021
+is omitted throughout this report because for that year, the data remain
+incomplete as of this writing.)
+
+![](.//media/image1.png)
+
+By this metric, wildfire frequency in 2020 was the 2nd-highest out of
+the entire 20-year record, and 60% of the 5 peak years occurred between
+2015 and 2020, which represents only 30% of the dataset.
+
+The data on the intensity of these wildfires tells a similar story. We
+see that the average fire intensity, as measured by sub-pixel fire
+radiative power retrievals (**FRP**)\[Csiszar et al., 2014\] and
+apparent brightness, both reached new records in 2020.
+
+![](.//media/image2.png)
+![](.//media/image3.png)
+
+By all three of these measures, we can see that wildfires are increasing
+in frequency and intensity. It is logical to conclude that more frequent
+and more intense wildfires will cause greater damage to life, property
+and ecosystem and will require greater resources to combat, and indeed
+the evidence bears this out \-- federal wildfire suppression costs in
+the United States have spiked from an annual average of about \$425
+million from 1985 to 1999 to \$1.6 billion from 2000 to 2019, according
+to data from
+[NIFC](https://www.nfpa.org/News-and-Research/Publications-and-media/NFPA-Journal/2020/November-December-2020/Features/Wildfire).
+In 2017 alone, damage from wildfires across the US exceeded a staggering
+[\$18 billion](https://www.iii.org/graph-archive/208963). Other parts of
+the world are being hit hard, too. This past summer, Spain suffered the
+worst wildfires that [it's seen in 20
+years](https://www.theguardian.com/world/2019/jun/27/hundreds-of-firefighters-tackle-blaze-in-north-east-spain),
+while [thousands of fires
+burned](https://www.nationalgeographic.com/environment/2019/08/amazon-fires-cause-deforestation-graphic-map/)
+in the Amazon Rainforest, an increase of [over 80 percent compared to
+the same time period last
+year](http://queimadas.dgi.inpe.br/queimadas/portal-static/situacao-atual/).
+"""
+
+st.markdown(BLOCK_8)
 
 BLOCK_5 = """
-Climate change continues to transform the planet, and it appears wildfire seasons are growing longer and more intense as a consequence. According to National Interagency Fire Center data, of the 10 years with the largest acreage burned, all have occurred since 2004, including the peak year in 2015. This period coincides with many of the warmest years on record nationwide (see the U.S. and Global Temperature indicator). The largest increases have occurred during the spring and summer months.
+According to National Interagency Fire Center data, of the 10 years with the largest acreage burned, all have occurred since 2004, including the peak year in 2015. This period coincides with many of the warmest years on record nationwide (see the U.S. and Global Temperature indicator). The largest increases have occurred during the spring and summer months.
 """
 
 st.markdown(BLOCK_5)
 
 st.image(WF_TREND)
 
-st.markdown("As the damage caused by wildfires intensifies, so does the interest in a more complete understanding of its causes and consequences.")
+st.markdown("As the damage caused by wildfires intensifies, so does public interest in a more complete understanding of its causes and consequences.")
 
 df_g = pd.read_csv(GF_RES)
 
@@ -68,41 +165,155 @@ dfg_agg = dfg_agg[["year", "wildfire"]]
 fig = px.line(dfg_agg, x="year", y="wildfire", title='Year over year peak interest in wildfires (Google Trends)')
 st.plotly_chart(fig)
 
-st.markdown("Big data techniques and technologies have transformed our understanding of a wide range of topics. Can they do the same for wildfire analysis?")
-
-st.markdown("In this project, we explore the enormous climate and imagery datasets now publicly available for researchers and extract unique lessons and actionable insights.")
-
-st.markdown("For more analysis and notebooks containing the code used to generate this project, please visit out [project Github.](https://github.com/penfever/bigdata-proj)")
-
-BLOCK = """
-Questions we explore include --
-
-* Why have recent fire seasons been so unusual?
-
-* What are some unique ways to visualize the human and financial toll of these fires, using big data tools?
-
-* What can we expect in 2022 and beyond, if current trends continue?
-
-* How can we use emerging distributed technologies to help combat the spread of wildfires?
-"""
-
-st.markdown(BLOCK)
-
-st.header("Image Classification in Wildfire Analysis")
+st.header("SECTION III: Taking Action on Wildfires")
 
 BLOCK_2 = """
-Wildfire imagery can tell us a lot about fire behavior. Specifically, it can help spot them early, before they spread and become more difficult to control. 
+Wildfires play an important role in natural systems, and their
+elimination is neither practical nor desirable. However, containment of
+[megafires](https://www.nationalgeographic.org/encyclopedia/megafire/)
+could achieve the best of both worlds, preventing unnatural surges while
+allowing healthy fires to burn under close monitoring. Unfortunately, it
+is impossible to contain a fire if you don't know where it is.
 
-OUR APPROACH:
-* We collected three different fire imagery datasets -- one of ground-level fires, one of aerial fire imagery taken from a drone, and one of satellite-level imagery, ranging in size from 2GB to 30GB.
-* We built 3 non-distributed classifiers (an XGBoost Boosted Tree, a Densenet CNN, and a Wide-Resnet CNN) using two popular frameworks, XGBoost and PyTorch, and tested them on our datasets for a total of 9 non-distributed models.
-* We then rebuilt the same three models in distributed frameworks using PyTorch Lightning, Dask and RAPIDS and tested them on our datasets (we did not fully test the distributed Resnet or Densnet for time reasons), a total of 6 distributed models.
-* For the models which did not use PyTorch Lightning, we saved the results of our runs in a MongoDB database and used that to build the table you see below.
-* For the PyTorch Lightning models, we saved interactive Tensorboard Dashboards which you can view below.
-* Our "distributed" setup was a single-node, single-GPU Colab instance, so accurate comparisons were not possible -- however, our experiments suggest that distributed models have the capacity to improve on the performance of traditional models in both speed and accuracy. 
+For this reason, it is a well-documented fact that early detection,
+partnered with prevention, must form the cornerstones of any successful
+wildfire management policy. Even small delays in detection can be very
+costly. Megafires can move at speeds of [nearly 15 miles per
+hour](https://en.wikipedia.org/wiki/Wildfire) under favorable winds.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vhJeDYQVtdQ?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+At its peak, the Camp Fire is estimated to have burned an area greater
+than one [football
+field](https://www.cnn.com/2018/11/09/us/wildfires-why-they-spread-so-quickly-wcx/index.html)
+(roughly 1.32 acres) in a single second.
+
+[Pano
+AI](https://www.sfchronicle.com/travel/article/S-F-startup-uses-AI-to-detect-wildfires-before-16668146.php),
+a San Francisco startup, is one of a number of private and public
+ventures that are currently attempting to use deep learning algorithms
+to detect wildfires quickly. While Pano and U. Nevada's
+[ALERT](https://www.alertwildfire.org/) focus on aerial and ground-level
+detection, respectively, placing high-definition panoramic cameras and
+satellite transmitters everywhere from telephone poles to remote
+mountaintops, other systems, like [U.C. Berkeley's
+FUEGO](https://fuego.ssl.berkeley.edu/) and [UCSD's
+WiFire](https://wifire.ucsd.edu/), have chosen to focus on detecting
+wildfires from satellite imagery. Still others have proposed using
+[fleets of
+drones](https://spectrum.ieee.org/drones-sensors-wildfire-detection) to
+sweep high-risk areas.
+
+One thing that all of these solutions have in common is their reliance
+on state of the art deep learning models to distinguish images which
+contain fires from those which do not. These methods can be extremely
+fast and accurate, particularly when they combine image classification
+and semantic segmentation models with
+[traditional](https://www.mdpi.com/journal/remotesensing/special_issues/biomass_burning_rs)
+[algorithmic](https://doi.org/10.1016/j.rse.2016.02.027)
+[approaches](https://doi.org/10.1016/j.rse.2015.08.032). Research is
+[ongoing](https://www.mdpi.com/journal/remotesensing/special_issues/biomass_burning_rs)
+in the area, but results are promising, and data on active fires are
+currently collected in real time from
+[NASA](https://firms.modaps.eosdis.nasa.gov/download/) and
+[NOAA](https://raws.nifc.gov/) satellites, among others.
+
+Our investigation focused on the potential of distributed systems to
+improve the speed and accuracy of image classifiers on fire data, since
+improvements in these areas could decrease the cost and improve the
+utility of all fire detection systems.
 """
 
 st.markdown(BLOCK_2)
+
+st.subheader("Our Methodology")
+
+BLOCK_9 = """
+1.  We collected and cleaned three image classification datasets of fire
+    / non-fire images. The datasets were chosen to simulate a range of
+    natural environments in which a remote sensor could be placed; at
+    ground level, in the air, and on a satellite.
+
+2.  We designed and implemented a control group of image classifiers
+    using convention ML and DL frameworks (XGBoost and PyTorch,
+    respectively)
+
+3.  We re-implemented our models in distributed frameworks. Wherever
+    possible, we replicated the hyperparameters and architecture of the
+    model. We did, however, adapt the data ingest process to account for
+    the unique demands of distributed systems, switching from image
+    directories to parquet files in situations where they were
+    supported.
+
+4.  We logged the results of our experiments to a remote database and
+    compared them.
+"""
+
+st.markdown(BLOCK_9)
+
+st.subheader("Key Findings")
+
+BLOCK_10 = """
+-   With proper data cleaning and methodology, modern DL and ML models
+    are capable of achieving classification accuracy greater than 90% on
+    all three types of data, without the benefit of metadata or
+    additional algorithmic techniques.
+
+-   On average, the traditional ML boosted tree classifier was generally
+    less accurate than deep CNNs -- however, the difference was often
+    not large, and careful cleaning and preparation of data it was
+    possible to eliminate much of the difference
+
+-   The boosted tree classifier was, on average, between 2x and 3x
+    faster than the deep CNNs, on both training and inference.
+
+-   When multispectral data was available (as in the case of the
+    Landsat-8 GeoTIFF files), training the classifier on all 10 bands
+    was prohibitively slow and led to worse results. The choice of bands
+    was pivotal in achieving peak accuracy, particularly the boosted
+    tree classifiers, which are not location-invariant. Specifically,
+    the use of SWIR data ([bands 6 and
+    7](https://www.usgs.gov/faqs/what-are-band-designations-landsat-satellites)
+    for Landsat-8) improved accuracy dramatically.
+
+-   Google Colab Pro is a poor environment for distributed computing
+    experiments because of its lack of support for virtual environments,
+    unpredictable hardware assignments and frequent timeouts. Future
+    experiments should be conducted on a different cloud service or on
+    the HPC.
+
+-   Dask-ml and RAPIDS are considerably less mature than PySpark, and
+    remain rough around the edges. For instance, RAPIDS cannot be
+    installed in a non-conda environment, and Dask and RAPIDS both lack
+    direct support for ANY deep learning framework, although it is
+    possible to distribute certain aspects of a PyTorch model manually
+    using Dask's joblib (we did not attempt this). However, their
+    potential for distributed learning is unparalleled because RAPIDS
+    allows the offloading of massive datasets from the GPU to RAM
+    without disrupting training -- this means that the size of a RAPIDS
+    dataset is (in theory) bounded only by the hardware it is running
+    on.
+
+-   PyTorch Lightning includes built-in SLURM support and highlights the
+    powerful flexibility of the underlying PyTorch architecture --
+    switching from a fully local to a fully distributed environment in
+    Lightning involves changing just one line of code, unlike in
+    Dask/RAPIDS, where it requires a complete refactor.
+
+-   Even in the completely sub-optimal distributed environment (one
+    node, one GPU, remote training) under which these experiments were
+    conducted, distributed models were either as fast or faster than
+    their non-distributed counterparts (20% faster, on average). We
+    attribute this difference to more efficient data processing.
+
+-   Accuracy varied wildly between distributed and non-distributed
+    models. We are still trying to account for the reasons for these
+    differences -- however, we suspect it has to do with the different
+    frameworks either processing the data differently or running with
+    different default hyperparameters.
+"""
+
+st.markdown(BLOCK_10)
 
 st.subheader("Without Distributed Computing")
 
@@ -157,4 +368,85 @@ elif mod_pick == "Densenet: Aerial":
     st_tensorboard(logdir="results/tensorboard/densenet_aerial", port=6008, width=1080)
     count += 1
 
-st.markdown("For details on the models and insight into the code, please check out the accompanying notebooks.")
+st.subheader("Conclusions and Future Work")
+
+"""
+We consider these results a promising start to understanding the full transformative potential of big data in this area. However, there is more work to be done, including robustifying our classifiers and refining our testing methodology to improve accuracy and consistency. We look forward to pursuing this work in the near future.
+"""
+
+st.subheader("Our Team and Our Tools")
+
+BLOCK_11 = """
+TEAM
+
+**Ben Feuer** served as the project lead, designed and performed all the
+tests in Part III, created the interactive dashboard, created and
+maintained the repository, and wrote the final report.
+
+All other team members produced supplemental project reports, which are
+available in the repository.
+
+**Subei Han** lead the [FIRMS
+dataset](https://firms.modaps.eosdis.nasa.gov/download/) and created all
+of the analytics used in Part I, as well as portions of Part II.
+
+**Dennis Pang** and **Jinyang Xue** co-lead the investigation into the
+[NIFC
+data](https://data-nifc.opendata.arcgis.com/datasets/nifc::wfigs-wildland-fire-locations-full-history/about)
+and created portions of the analytics used in Part II.
+
+**Yuvraj Raina** lead the investigation into the [NCWG
+dataset](https://www.kaggle.com/rtatman/188-million-us-wildfires) and
+created portions of the analytics used in Part II.
+
+TOOLS
+
+All code was written and all models were trained on [Google Colab
+Pro](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi0waHs4-30AhVZjYkEHfOtASYQFnoECAQQAQ&url=https%3A%2F%2Fcolab.research.google.com%2Fsignup&usg=AOvVaw0l1TdGCKd9vmmpE5Q0Zrk1)
+and written in [Jupyter notebooks](jupyter.org).
+
+We used [PySpark](https://spark.apache.org/docs/latest/api/python/)
+environment for the majority of our analytics. The techniques we used
+included aggregation, pivoting and window functions. When necessary, we
+used [miniconda](https://docs.conda.io/en/latest/miniconda.html) within
+Colab as an environment manager.
+
+Our graphs and charts were produced using
+[Matplotlib](https://matplotlib.org/),
+[Seaborn](https://seaborn.pydata.org/),
+[Altair](https://altair-viz.github.io/), and [Plotly
+Express](https://plotly.com/python/plotly-express/).
+
+We used [Fiona](https://pypi.org/project/Fiona/) and
+[RasterIO](https://rasterio.readthedocs.io/en/latest/) to process
+geospatial data and images.
+
+Our map visualizations were generated using
+[Folium](https://python-visualization.github.io/folium/plugins.html) and
+[Plotly Express](https://plotly.com/python/plotly-express/).
+
+Our base classifier models were written in
+[PyTorch](https://pytorch.org/) and
+[XGBoost](https://xgboost.readthedocs.io/en/stable/).
+
+We used [PyArrow](https://arrow.apache.org/docs/python/index.html) to
+generate parquet files for the distributed classifiers.
+
+Our distributed classifiers were written in [PyTorch
+Lightning](https://www.pytorchlightning.ai/),
+[Dask-ml](https://dask.org/) and
+[RAPIDS](https://developer.nvidia.com/rapids).
+
+[MongoDB Atlas](https://www.mongodb.com/atlas/database) and
+[Tensorboard](https://www.tensorflow.org/tensorboard) were used to log
+the results of the classifiers.
+
+Our interactive dashboard was created using [streamlit](streamlit.io/).
+
+LICENSE
+
+The contents of this report and repository are subject to the [MIT
+License](https://opensource.org/licenses/MIT).
+"""
+
+st.markdown(BLOCK_11)
