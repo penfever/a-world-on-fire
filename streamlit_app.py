@@ -207,7 +207,7 @@ droughts in California correlate closely with peak fire years recorded
 in FIRMS.
 """
 
-st.image(".//media/image7.png", caption="NOAA NIDIS Drought Data in California")
+st.image(".//media/image7.jpeg", caption="NOAA NIDIS Drought Data in California")
 
 """
 These data suggest that an increase in drought conditions is strongly
