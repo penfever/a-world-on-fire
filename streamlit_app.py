@@ -106,9 +106,12 @@ wildfires per year, like the one we see here, aggregated from NASA's
 [FIRMS dataset](https://firms.modaps.eosdis.nasa.gov/download/). (2021
 is omitted throughout this report because for that year, the data remain
 incomplete as of this writing.)
+"""
+st.markdown(BLOCK_8)
 
-![](.//media/image1.png)
+st.image(".//media/image1.png", caption="Wildfires per year, 2001-2020")
 
+"""
 By this metric, wildfire frequency in 2020 was the 2nd-highest out of
 the entire 20-year record, and 60% of the 5 peak years occurred between
 2015 and 2020, which represents only 30% of the dataset.
@@ -117,10 +120,12 @@ The data on the intensity of these wildfires tells a similar story. We
 see that the average fire intensity, as measured by sub-pixel fire
 radiative power retrievals (**FRP**)\[Csiszar et al., 2014\] and
 apparent brightness, both reached new records in 2020.
+"""
 
-![](.//media/image2.png)
-![](.//media/image3.png)
+st.image(".//media/image2.png", caption="Wildfire FRP per year, 2001-2020")
+st.image(".//media/image3.png", caption="Wildfire Apparent Brightness per year, 2001-2020")
 
+"""
 By all three of these measures, we can see that wildfires are increasing
 in frequency and intensity. It is logical to conclude that more frequent
 and more intense wildfires will cause greater damage to life, property
@@ -141,8 +146,6 @@ in the Amazon Rainforest, an increase of [over 80 percent compared to
 the same time period last
 year](http://queimadas.dgi.inpe.br/queimadas/portal-static/situacao-atual/).
 """
-
-st.markdown(BLOCK_8)
 
 BLOCK_5 = """
 According to National Interagency Fire Center data, of the 10 years with the largest acreage burned, all have occurred since 2004, including the peak year in 2015. This period coincides with many of the warmest years on record nationwide (see the U.S. and Global Temperature indicator). The largest increases have occurred during the spring and summer months.
