@@ -225,10 +225,8 @@ By raw count, human-initiated wildfires exceed that of natural
 wildfires. Furthermore, human-initiated wildfires are increasing in
 frequency, whereas the frequency of natural wildfires has remained flat.
 """
-
-st.image(".//media/image8.png", caption="NIFC Causes of Wildfires")
-st.image(".//media/image9.png", caption="NIFC Causes of Wildfires over time")
-st.image(".//media/image10.png", caption="NIFC Causes of Wildfires over time")
+st.image(".//media/image9.png", caption="NIFC Causes of Wildfires")
+st.image(".//media/image8.png", caption="NIFC Causes of Wildfires over time")
 
 """
 This might seem to contradict our earlier conclusions
@@ -238,7 +236,9 @@ dataset](https://www.kaggle.com/rtatman/188-million-us-wildfires), we
 can see that the story is in fact quite different. Lightning alone
 accounts for more burned area than all other causes combined, with room
 to spare.
-
+"""
+st.image(".//media/image10.png", caption="Burned area aggregated by cause")
+"""
 The explanation for this is well understood \-- fires started by human
 beings tend to occur in populated areas, and are therefore more likely
 to be detected and contained before they grow into uncontained
@@ -246,17 +246,17 @@ megafires. Fires caused by lightning (and to a lesser extent,
 malfunctioning electrical equipment) tend to happen in remote and
 inaccessible areas and are more difficult to detect and combat
 effectively.
-"""
 
-st.image(".//media/image11.png", caption="Burned area aggregated by wildfire cause")
-
-"""
 This fact accounts for the following
 graph. Alaska is the bottom third of states for wildfire frequency.
 However, in terms of acreage burned, it exceeds the bottom twenty states
 in the list combined. Alaska's low population and rugged terrain make it
 a very difficult environment for firefighters.
+"""
 
+st.image(".//media/image11.png", caption="Burned area aggregated by state")
+
+"""
 Although large uncontrolled forest fires have always been a historical
 fact of life, that does not mean that the size and frequency of
 wildfires we are seeing today is somehow natural. Indeed, it is likely
@@ -288,8 +288,8 @@ but a handful of states saw enough annual burned area to register on the
 chart.
 """
 
-st.image(".//media/image12.png", caption="Alaska burn area")
-st.image(".//media/image13.png", caption="Alaska burn area")
+st.image(".//media/image12.jpg", caption="2002 Map: Percent of State Burned")
+st.image(".//media/image13.jpg", caption="2020 Map: Percent of State Burned")
 
 """
 Overall, the data lead us to conclude that the size and scale of
