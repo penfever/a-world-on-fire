@@ -2,6 +2,17 @@
 
 ### A World on Fire was compiled in December 2021 by Benjamin Feuer, Jinyang Xue, Subei Han, Dennis Pang and Yuvraj Raina
 
+All visualizations, analytics and models generated in this report were
+produced with code written by the report team, unless otherwise noted,
+either in this report or in our [Github
+repository](https://github.com/penfever/bigdata-proj) notebooks, where
+our code can be viewed. Pre-trained model weights for certain
+classifiers are available on request.
+
+An interactive summary of our key findings can be explored via our
+[interactive
+dashboard](https://share.streamlit.io/penfever/bigdata-proj/main).
+
 ## ABSTRACT
 
 This report aims to succinctly document the existence of a novel and
@@ -395,17 +406,6 @@ Next year, it could be ours.
 ### CITATIONS
 
 The citations for this report are included in-line via hyperlinks.
-
-All visualizations, analytics and models generated in this report were
-produced with code written by the report team, unless otherwise noted,
-either in this report or in our [Github
-repository](https://github.com/penfever/bigdata-proj) notebooks, where
-our code can be viewed. Pre-trained model weights for certain
-classifiers are available on request.
-
-An interactive summary of our key findings can be explored via our
-[interactive
-dashboard](https://share.streamlit.io/penfever/bigdata-proj/main).
 
 ### OUR TEAM
 
