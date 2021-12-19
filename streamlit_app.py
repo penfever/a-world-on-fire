@@ -53,9 +53,7 @@ Below is a summary of the three major points we cover \--
     the individual, and as such, we must seek systemic, structural solutions
     to the problem.
 
--   III\. Distributed deep learning models for image classification as a
-    potential method of improving wildfire response times by emergency teams
-    and thereby reducing wildfire spread.
+-   III\. Distributed deep learning models for image classification can potentially improve wildfire emergency team response times and thereby reduce wildfire spread.
 
 Afterwards, we offer a brief conclusion and a list of resources for
 further exploration.
